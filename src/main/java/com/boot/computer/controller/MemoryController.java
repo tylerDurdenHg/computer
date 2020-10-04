@@ -15,14 +15,15 @@ import com.boot.computer.model.Memory;
 import com.boot.computer.service.MemoryService;
 
 @RestController
-@RequestMapping("/memory")
+@RequestMapping("/memory2")
 public class MemoryController {
 	
 	@Autowired
 	private MemoryService service;
 
-	@GetMapping("/{speed}")
+	@GetMapping("/{speed}2")
 	public Memory findMemoryWithSPeed(@PathVariable final int speed) {
+		//hi added this line ....
 		return service.findByMemSpeed(speed);
 	}
 	
