@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @RequestMapping("/messageBundle3")
 public class MessageBundleConroller {
 
@@ -19,8 +18,8 @@ public class MessageBundleConroller {
 	@Autowired
 	private ResourceBundle bundle;
 	
-	@GetMapping
 	public String getMessage3() {
+		LOG.info("this line is added");
 		LOGGER.info("===****=====", Locale.getDefault());
 		return bundle.getString("userName") ;
 		LOGGER.info("this line added at local repos");

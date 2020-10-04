@@ -15,16 +15,15 @@ import com.boot.computer.model.Memory;
 import com.boot.computer.service.MemoryService;
 
 @RestController
-@RequestMapping("/memory3")
+@RequestMapping("/memory")
 public class MemoryController {
 	
 	@Autowired
 	private MemoryService service;
 
-//	@GetMapping("/{speed}")
+	@GetMapping("/{speed}")
 	public Memory findMemoryWithSPeed(@PathVariable final int speed) {
 		return service.findByMemSpeed(speed);
-		System.out.println("local has added this line ");
 	}
 	
 	@GetMapping("/all")
