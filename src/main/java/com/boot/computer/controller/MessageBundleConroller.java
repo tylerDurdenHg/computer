@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/messageBundle")
+@RequestMapping("/messageBundle3")
 public class MessageBundleConroller {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessageBundleConroller.class) ;
@@ -20,9 +20,10 @@ public class MessageBundleConroller {
 	private ResourceBundle bundle;
 	
 	@GetMapping
-	public String getMessage() {
+	public String getMessage3() {
 		LOGGER.info("===****=====", Locale.getDefault());
 		return bundle.getString("userName") ;
+		LOGGER.info("this line added at local repos");
 	}
 	
 }
